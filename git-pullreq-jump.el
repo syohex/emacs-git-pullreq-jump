@@ -5,7 +5,7 @@
 ;; Author: Shohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-git-pullreq-jump
 ;; Version: 0.01
-;; Package-Requires: ((emacs "26.3"))
+;; Package-Requires: ((emacs "27.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@
 (require 'browse-url)
 
 (defun git-pullreq-jump--committed-line-p (commit-id)
-  ;; 'git blame' shows that un-committed line is '000000000'
+  ;; 'git blame' shows '000000000' for un-committed line
   (not (string-match-p "\\`\\(?:0+\\|-\\)\\'" commit-id)))
 
 (defun git-pullreq-jump--first-parent (file line)
